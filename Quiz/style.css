@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:linear-gradient( to right,#1e40af, #1e3a8a, #1a3283);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Classes referentes ao index.html */
+
+/* Configuração do container */
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 8px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* configuração das seções */
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 20px;
+}
+
+/* configuração da logo */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 15px;
+}
+
+/* configuração do h1 */
+h1{
+    font-size: 42px;
+    margin: 10px;
+}
+
+/* configuração dos textos */
+p{
+    width: 60%;
+    text-align: center;
+    color: #494949;
+}
+
+/* configuração do box onde vai ficar a breve apresentação */
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: #608ba023;
+}
+
+/* configuração do h2 */
+h2{
+    font-size: 22px;
+
+}
+
+/* configuração do botão que inicia o quiz */
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d4ed8;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    height: 45px;
+    margin: 10px;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+    transition: transform 0.5s ease;
+}
+
+/* configuração do hover */
+a:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    background-color: #1e40af;
+}
+
+/* Classes referentes ao quiz.html */
+
+/* configuração onde vai ficar o timer a contagem de questão */
+.topo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px ;
+    font-size: 18px;
+}
+
+/*  Configuração do timer*/
+#timer{
+    display: flex;
+    width: 12%;
+    justify-content: center;
+    text-align: left;
+    background-color: #608ba069;
+    border-radius: 15px;
+}
+/* numero do timer */
+#time-left{
+    margin: 0px 0px 0px 8px;
+}
+
+/* Texto da contagem de questão */
+#N-question{
+    display: flex;
+    width: 78%;
+    justify-content: end;
+}
+
+/* numero da questão */
+#Numero{
+    margin: 0px 8px;
+}
+
+/* imagem do quiz */
+#img{
+    display: flex;
+    width: 50%;
+    height: 200px;
+    background-color: #608ba069;
+}
+
+/* Não mexi em nenhum desses dois */
+.question {
+    display: flex;
+    width: 85%;
+    height: auto;
+    font-size: 20px;
+    justify-content: left;
+    margin: 20px;
+}
+
+.options button {
+width: 100%;
+text-align: left;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+background: #eee;
+border-radius: 5px;
+cursor: pointer;
+}
