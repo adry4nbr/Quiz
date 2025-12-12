@@ -77,51 +77,58 @@ O CSS também deixa margens e espaçamentos consistentes.
 
 5. script.js — Lógica do Quiz
 
+
 Aqui está toda a lógica do funcionamento do quiz.
 
 Principais funções:
-iniciarPergunta()
 
-Mostra a pergunta atual, cria os botões, reinicia o timer e atualiza a contagem.
+  iniciarPergunta()
 
-iniciarTimer()
+*Mostra a pergunta atual, cria os botões, reinicia o timer e atualiza a contagem.
 
-Controla a contagem regressiva.
+
+  iniciarTimer()
+
+*Controla a contagem regressiva.
 Se o tempo zerar:
 
-Passa para a próxima questão automaticamente.
-
-responder()
-
-Executada quando o usuário clica em uma alternativa:
-
-Desabilita todos os botões
-
-Destaca a alternativa escolhida
-
-Marca resposta correta/errada
-
-Aguarda 2 segundos e avança para a próxima pergunta
-
-mostrarResultado()
-
-Substitui todo o conteúdo mostrando:
-
-Pontuação total
-
-Número de perguntas respondidas
+*Passa para a próxima questão automaticamente.
 
 
-Como executar o projeto
+  responder()
 
-Baixe todos os arquivos
+*Executada quando o usuário clica em uma alternativa:
 
-Mantenha as pastas exatamente como estão
+*Desabilita todos os botões
 
-Abra o arquivo index.html no navegador
+*Destaca a alternativa escolhida
 
-Clique em "Iniciar Quiz"
+*Marca resposta correta/errada
 
-Responda as perguntas!
+*Aguarda 2 segundos e avança para a próxima pergunta
+
+
+  mostrarResultado()
+
+*Substitui todo o conteúdo mostrando:
+
+*Pontuação total
+
+*Número de perguntas respondidas
+
+
+
+Como executar o projeto:
+
+
+*Baixe todos os arquivos
+
+*Mantenha as pastas exatamente como estão
+
+*Abra o arquivo index.html no navegador
+
+*Clique em "Iniciar Quiz"
+
+*Responda as perguntas!
 
 Não é necessário instalar nada.
