@@ -4,18 +4,18 @@ Este projeto é um quiz interativo feito com HTML, CSS e JavaScript. Ele apresen
 
 A interface foi dividida em duas páginas:
 
-Home (index.html) → Tela inicial com apresentação e botão para iniciar
-Quiz (quiz.html) → Onde acontecem as perguntas, timer, alternativas e resultado
+Home (index.html) -> Tela inicial com apresentação e botão para iniciar
+Quiz (quiz.html) -> Onde acontecem as perguntas, timer, alternativas e resultado
 
 1. index.html — Tela inicial
 
 A página index.html funciona como menu principal.
 Nela encontramos:
 
-✔ Logo da empresa
-✔ Texto de apresentação do quiz
-✔ Breve introdução sobre a história da Tramontina
-✔ Botão para iniciar o quiz
+Logo da empresa
+Texto de apresentação do quiz
+Breve introdução sobre a história da Tramontina
+Botão para iniciar o quiz
 
 Essa página utiliza o arquivo de estilo:
 
@@ -67,11 +67,11 @@ Pergunta e alternativas
 
 Estilos de:
 
-✔ Alternativa correta (verde)
+Alternativa correta (verde)
 
-✔ Alternativa errada (vermelho)
+Alternativa errada (vermelho)
 
-✔ Destaque da alternativa certa quando o usuário erra
+Destaque da alternativa certa quando o usuário erra
 
 O CSS também deixa margens e espaçamentos consistentes.
 
