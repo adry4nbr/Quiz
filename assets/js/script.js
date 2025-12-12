@@ -4,27 +4,70 @@ let tempoPorPergunta = 10; // segundos
 const quiz = [
   {
     pergunta: "Tramontina corte...?",
-    alternativas: ["Rapido", "Ligeiro", "Certo", "Torto"],
+    alternativas: ["Rapido", "Ligeiro", "Certo", "Torto", "Macio"],
     correta: 0,
-    pontos: 10
+    pontos: 1
   },
   {
-    pergunta: "Quanto é 5 + 7?",
-    alternativas: ["10", "11", "12", "13"],
+    pergunta: "A Tramontina é uma marca?",
+    alternativas: ["Argentina", "Alemã", "Brasileira", "Francesa", "Holandesa"],
     correta: 2,
-    pontos: 5
+    pontos: 1
   },
   {
-    pergunta: "Qual linguagem roda no navegador?",
-    alternativas: ["Python", "C++", "JavaScript", "Java"],
-    correta: 2,
-    pontos: 10
+    pergunta: "Quando a Tramontina foi fundada?",
+    alternativas: ["1991", "1911", "1981", "1811", "1891"],
+    correta: 1,
+    pontos: 1
+  },
+  {
+    pergunta: "Quantos produtos tem a Tramontina?",
+    alternativas: ["19 mil", "10 mil", "81 mil", "18 mil", "22 mil"],
+    correta: 4,
+    pontos: 1
+  },
+  {
+    pergunta: "Em quantos paises ela está presente?",
+    alternativas: ["23", "+ 120", "76", "120", "50"],
+    correta: 1,
+    pontos: 1
+  },
+  {
+    pergunta: "A Tramontina começou como qual tipo de estabelecimento?",
+    alternativas: ["Ferraria", "Mercado", "Padaria", "Marcenaria", "Shopping"],
+    correta: 0,
+    pontos: 1
+  },
+  {
+    pergunta: "Qual foi o primeiro produto de destaque da Tramontina?",
+    alternativas: ["Talheres de inox", "Facas", "Panela", "Canivete", "Martelos"],
+    correta: 3,
+    pontos: 1
+  },
+  {
+    pergunta: "Qual é a principal área de atuação da Tramontina?",
+    alternativas: ["Alimentação", "Utensílios domésticos e ferramentas", "Automoveis", "Roupas", "Perfumes"],
+    correta: 1,
+    pontos: 1
+  },
+  {
+    pergunta: "Quem foi o fundador da Tramontina?",
+    alternativas: ["Matteo Tramontini", "Adolfo Tramontini", "Geppeto Tramontoni", "Valentin Tramontina", "Mario Tramontoni"],
+    correta: 3,
+    pontos: 1
+  },
+  {
+    pergunta: "Onde a Tramontina foi fundada?",
+    alternativas: ["Rio Grande do Sul", "Pernambuco", "Rio de Janeiro", "Bahia", "São Paulo"],
+    correta: 0,
+    pontos: 1
   }
 ];
 
-// IMAGENS DE FUNDO POR PERGUNTA
+// IMAGENS DE FUNDO POR PERGUNTA / OBS: Não consegui colocar as imagens
+
 const fundos = [
-  "url('')",
+  "url('imagens/logoTramontina.jpeg')",
   "')",
   "')"
 ];
@@ -58,7 +101,7 @@ function iniciarPergunta() {
   // ====
   const numQuestao = document.getElementById("N-question").textContent = `Pergunta ${indice+1} de ${quiz.length}` 
   numQuestao
-  //
+ 
 
   tempo = tempoPorPergunta;
   document.getElementById("time-left").textContent = tempo;
