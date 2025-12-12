@@ -77,17 +77,14 @@ O CSS também deixa margens e espaçamentos consistentes.
 
 5. script.js — Lógica do Quiz
 
-
-Aqui está toda a lógica do funcionamento do quiz.
-
 Principais funções:
 
-  iniciarPergunta()
+  5.1. iniciarPergunta()
 
 *Mostra a pergunta atual, cria os botões, reinicia o timer e atualiza a contagem.
 
 
-  iniciarTimer()
+  5.2. iniciarTimer()
 
 *Controla a contagem regressiva.
 Se o tempo zerar:
@@ -95,7 +92,7 @@ Se o tempo zerar:
 *Passa para a próxima questão automaticamente.
 
 
-  responder()
+ 5.3. responder()
 
 *Executada quando o usuário clica em uma alternativa:
 
@@ -108,7 +105,7 @@ Se o tempo zerar:
 *Aguarda 2 segundos e avança para a próxima pergunta
 
 
-  mostrarResultado()
+ 5.4. mostrarResultado()
 
 *Substitui todo o conteúdo mostrando:
 
@@ -118,17 +115,24 @@ Se o tempo zerar:
 
 
 
-Como executar o projeto:
 
 
-*Baixe todos os arquivos
+Adições: 
 
-*Mantenha as pastas exatamente como estão
+1. index.html
+2. style_index.css
+3. syle_quiz.css
 
-*Abra o arquivo index.html no navegador
+Foram codigos feitos sem a base do professor.
 
-*Clique em "Iniciar Quiz"
 
-*Responda as perguntas!
+Modificações:
 
-Não é necessário instalar nada.
+quiz.html:
+
+1. Uma div "Container" que contem todas as informações do quiz
+2. Div "Topo" para conter o timer e o numero da questão
+3. Section para colocar a imagem de cada pergunta do quiz
+
+
+script.js:
