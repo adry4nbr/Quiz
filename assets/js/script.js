@@ -143,6 +143,7 @@ async function responder(i, btnClicado) {
 
   const botoes = document.getElementById("options").querySelectorAll('button')
 
+  // Desabilita todos os botões para que não possam ser clicados novamente durante a espera.
   botoes.forEach(btn => {
     btn.disabled = true;
   })
@@ -156,6 +157,7 @@ async function responder(i, btnClicado) {
   } else {
     btnClicado.classList.add('resposta-errada')
 
+    // Percorre todas as respostas para indicar qual é a correta de fato
     botoes.forEach((btn, j) => {
       if (j === q.correta) {
         btn.classList.add('resposta-certa-destaque')
