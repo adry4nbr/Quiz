@@ -1,8 +1,10 @@
+/* Configuração universal */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* Configuração do Body */
 body {
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,10 +21,10 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 65%;
-    height: 700px;
+    height: 800px;
     border-radius: 20px;
-    background-color: white;
-    box-shadow: 10px 8px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.692);
+    box-shadow: 10px 8px 6px rgba(0, 0, 0, 0.2);
     margin: 20px;
 }
 
@@ -84,14 +86,17 @@ body {
     font-weight: 600;
 }
 
+
+/* Área onde guarda as opções do Quiz */
 .options {
     display: flex;
     flex-direction: column;
     width: 85%;
-    height: 300px;
+    height: 100%;
     gap: 3%;
 }
 
+/* Botões de cada resposta do Quiz */
 .options button {
 width: 100%;
 height: 17%;
@@ -106,6 +111,7 @@ transition: ease-out 0.3s;
 font-size: 15px;
 }
 
+/* Configuração para quando o mouse estiver em cima do botão */
 .options button:hover {
     transition: ease 0.3s;
     border-color: #7897ff;
@@ -113,12 +119,20 @@ font-size: 15px;
     color: #0146a7;
 }
 
+/* Configuração onde mostra a resposta correta marcada/ou não */
 .options .resposta-correta, .options .resposta-certa-destaque {
     background-color: #0eff368f;
     color: black;
 }
 
+/* Configuração onde mostra a resposta incorreta caso seja marcada */
 .options .resposta-errada {
     background: #fc10109d;
 }
 
+/* Área da imagem acima da pergunta do Quiz */
+#section-image {
+    display: flex;
+    width: 70%;
+    height: 70%;
+}

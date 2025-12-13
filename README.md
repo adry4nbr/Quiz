@@ -136,3 +136,11 @@ quiz.html:
 
 
 script.js:
+
+Segue as alterações feitas no JS
+
+1. Mudanças nas perguntas utilizadas.
+2. Utilização de troca de imagem, ao invés de utilizar no background da página, foi utilizado em um molde acima das perguntas.
+3. Foi adicionada a função de "pintar" a alternativa correta, se caso errar, "pintar" a marcada de vermelho e indicar qual era a de fato correta.
+4. Transformada a função "responder" em assíncrona.
+5. Criação da função "sleep", utilizando promise para fazer com que o Quiz espere os milissegundos determinados atraves da função. 

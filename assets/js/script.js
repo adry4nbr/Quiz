@@ -1,6 +1,8 @@
 // CONFIGURAÇÕES
 let tempoPorPergunta = 10; // segundos
 
+
+//Perguntas do quiz
 const quiz = [
   {
     pergunta: "Tramontina corte...?",
@@ -64,28 +66,39 @@ const quiz = [
   }
 ];
 
-// IMAGENS DE FUNDO POR PERGUNTA / OBS: Não consegui colocar as imagens
+// IMAGENS ACIMA DA PERGUNTA
 
 const fundos = [
-  "url('imagens/logoTramontina.jpeg')",
-  "')",
-  "')"
+  "url('../assets/img/Pergunta1.png')",
+  "url('../assets/img/Pergunta2.png')",
+  "url('../assets/img/Pergunta3.png')",
+  "url('../assets/img/Pergunta4.png')",
+  "url('../assets/img/Pergunta5.png')",
+  "url('../assets/img/Pergunta6.png')",
+  "url('../assets/img/Pergunta7.png')",
+  "url('../assets/img/Pergunta8.png')",
+  "url('../assets/img/Pergunta9.png')",
+  "url('../assets/img/Pergunta10.png')",
 ];
 
+// Variaveis para o funcionamento e estatisticas do Quiz
 let indice = 0;
 let pontuacao = 0;
 let tempo;
 let contador;
 
 function iniciarPergunta() {
-  //document.body.style.backgroundImage = fundos[indice] || 'none';
-  document.body.style.backgroundSize = 'cover';
-  document.body.style.backgroundPosition = 'center';
+  //Mudança de body background para a section image
+  const sectionImage = document.getElementById("section-image")
+  sectionImage.style.backgroundImage = fundos[indice] || 'none';
+  sectionImage.style.backgroundSize = 'cover';
+  sectionImage.style.backgroundPosition = 'center';
   if (indice >= quiz.length) {
     mostrarResultado();
     return;
   }
 
+  // Mostra as alternativas do quiz
   const q = quiz[indice];
   document.getElementById("question-text").textContent = `${q.pergunta}`;
   const opcoesDiv = document.getElementById("options");
@@ -98,7 +111,7 @@ function iniciarPergunta() {
     opcoesDiv.appendChild(btn);
   });
 
-  // ====
+  // Linha de codigo para mostrar em qual pergunta está no momento
   const numQuestao = document.getElementById("N-question").textContent = `Pergunta ${indice+1} de ${quiz.length}` 
   numQuestao
  
@@ -108,12 +121,14 @@ function iniciarPergunta() {
   iniciarTimer();
 }
 
+// Temporizador do Quiz
 function iniciarTimer() {
   clearInterval(contador);
   contador = setInterval(() => {
     tempo--;
     document.getElementById("time-left").textContent = tempo;
 
+    // Caso termine o tempo, o quiz anula a questão e passa para a proxima pergunta
     if (tempo <= 0) {
       clearInterval(contador);
       indice++;
@@ -122,6 +137,7 @@ function iniciarTimer() {
   }, 1000);
 }
 
+// Função assíncrona para resposta
 async function responder(i, btnClicado) {
   clearInterval(contador)
 
@@ -132,6 +148,8 @@ async function responder(i, btnClicado) {
   })
 
   const q = quiz[indice];
+
+  // Checagem se a opção escolhida é a correta ou não
   if (i === q.correta) {
     pontuacao += q.pontos;
     btnClicado.classList.add('resposta-correta');
@@ -144,11 +162,15 @@ async function responder(i, btnClicado) {
       }
     })
   }
+
+  // Espera 2000ms para partir para a proxima pergunta
   await sleep(2000)
+
   indice++;
   iniciarPergunta();
 }
 
+// Função para mostrar todas as estatisticas do Quiz
 function mostrarResultado() {
   document.getElementById("quiz-container").innerHTML = `
     <h2>Resultado Final</h2>
@@ -159,6 +181,7 @@ function mostrarResultado() {
   voltar.textContent(alt)
 }
 
+// Função utilizando Promise para fazer com que o programa aguarde a quantidade de ms desejados
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
