@@ -1,0 +1,193 @@
+/* Configuração universal */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuração do Body */
+body {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:linear-gradient( to right,#1e40af, #1e3a8a, #1a3283);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Configuração do container */
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 65%;
+    height: 680px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.692);
+    box-shadow: 10px 8px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+/* configuração onde vai ficar o timer a contagem de questão */
+.topo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px ;
+    font-size: 18px;
+}
+
+/*  Configuração do timer*/
+#timer{
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    text-align: left;
+    background-color: #73787a69;
+    border-radius: 5px;
+    font-weight: 500;
+}
+/* numero do timer */
+#time-left{
+    margin: 0px 0px 0px 8px;
+}
+
+/* Texto da contagem de questão */
+#N-question{
+    display: flex;
+    width: 74%;
+    justify-content: end;
+    font-weight: 500;
+}
+
+/* numero da questão */
+#Numero-Q{
+    margin: 0px 8px;
+}
+
+/* imagem do quiz */
+#section-image{
+display: flex; 
+width: auto;
+height: 200px;
+background-repeat: no-repeat;/* Impede que a imagem de fundo se repita */
+}
+
+/* Área das questões */
+.question {
+    display: flex;
+    width: 85%;
+    height: auto;
+    font-size: 20px;
+    justify-content: left;
+    margin: 20px;
+    font-weight: 600;
+}
+
+
+/* Área onde guarda as opções do Quiz */
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    gap: 3%;
+}
+
+/* Botões de cada resposta do Quiz */
+.options button {
+width: 100%;
+height: 13%;
+text-align: left;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+background: #eee;
+border-radius: 10px;
+cursor: pointer;
+transition: ease-out 0.3s;
+font-size: 15px;
+}
+
+/* Configuração para quando o mouse estiver em cima do botão */
+.options button:hover {
+    transition: ease 0.3s;
+    border-color: #7897ff;
+    background-color: #6ec0e65d;
+    color: #0146a7;
+}
+
+/* Configuração onde mostra a resposta correta marcada/ou não */
+.options .resposta-correta, .options .resposta-certa-destaque {
+    background-color: #0eff368f;
+    color: black;
+}
+
+/* Configuração onde mostra a resposta incorreta caso seja marcada */
+.options .resposta-errada {
+    background: #fc10109d;
+}
+
+/* Área da imagem acima da pergunta do Quiz */
+#section-image {
+    display: flex;
+    width: 70%;
+    height: 70%;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .Container {
+        width: 95%;
+        height: auto;
+        margin: 10px;
+        border-radius: 15px;
+        padding-bottom: 20px;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+        font-size: 16px;
+    }
+
+    #timer {
+        width: 50%;
+        justify-content: center;
+    }
+
+    #N-question {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #section-image {
+        width: 100%;
+        height: 160px;
+    }
+
+    .question {
+        width: 90%;
+        font-size: 18px;
+        margin: 15px 0;
+        text-align: left;
+    }
+
+    .options {
+        width: 90%;
+        gap: 10px;
+    }
+
+    .options button {
+        height: auto;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
